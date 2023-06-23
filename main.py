@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.edge.options import Options
+# from selenium.webdriver.chrome.options import Options
 import json
 import time
 from selenium.webdriver.common.by import By
@@ -12,9 +13,10 @@ PASSWORD = '11111111'
 chrome_options = Options()
 chrome_options.add_extension('MetaMask.crx')
 driver = webdriver.Edge(options=chrome_options)
+# driver = webdriver.Chrome(options=chrome_options)
 driver.maximize_window()
 driver.implicitly_wait(10)
-time.sleep(0.5)
+time.sleep(1)
 driver.switch_to.window(driver.window_handles[1])
 time.sleep(0.5)
 #--------------------------------------------------
