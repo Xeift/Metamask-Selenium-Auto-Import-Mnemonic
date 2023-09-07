@@ -1,10 +1,17 @@
 # Metamask-Selenium-Auto-Import-Mnemonic
-`main.py` main script
+`chrome.py` and `edge.py` are main script. You can choose either script to run if you have installed both browser.
 
-`MetaMask.crx` Metamask extension download from Chrome Web Store, modified one line code. [Why modify?](https://github.com/LavaMoat/LavaMoat/pull/360#issuecomment-1547271080)
+`MetaMask_Chrome.crx` and `MetaMask_Edge.crx` are Metamask extension download from Chrome Web Store and Edge Web Store, modified one line code. [Why modify?](https://github.com/LavaMoat/LavaMoat/pull/360#issuecomment-1547271080)
 
-You can download modify extension by yourself if you don't trust this crx file.
+You can download the Metamask extension using [CRX Extractor](https://chrome.google.com/webstore/detail/crx-extractordownloader/ajkhmmldknmfjnmeedkbkkojgobmljda) and modify the extension by yourself if you don't trust this crx file.
 
-`msedgedriver.exe` Edge Driver, if you prefer Chrome Driver then simply replace this file with chromedriver.exe. Remember to change line 3 and line 16 in `main.py`
+`chromedriver.exe` and `msedgedriver.exe` are browser driver.
 
+I use `Edge 116.0.1938.69` and `Chrome 116.0.5845.180`.
+
+If you use different version of Edge or Chrome, download the following driver version by yourself and replace `msedgedriver.exe` or `chromedriver.exe` with it.
+
+[Download chromedriver](https://googlechromelabs.github.io/chrome-for-testing/#stable) | [Download msedgedriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+
+Video Demo
 [![video](https://img.youtube.com/vi/BEqc2wEX3iY/maxresdefault.jpg)](https://www.youtube.com/watch?v=BEqc2wEX3iY)
