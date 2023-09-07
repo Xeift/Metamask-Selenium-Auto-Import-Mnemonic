@@ -11,7 +11,7 @@ I use `Edge 116.0.1938.69` and `Chrome 116.0.5845.180`.
 
 If you use different version of Edge or Chrome, download the following driver version by yourself and replace `msedgedriver.exe` or `chromedriver.exe` with it.
 
-[Download chromedriver (version <= 115)](https://googlechromelabs.github.io/chrome-for-testing/#stable) | [Download chromedriver (version >= 116)](https://chromedriver.chromium.org/downloads) | [Download msedgedriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+[Download chromedriver (version <= 115)](https://chromedriver.chromium.org/downloads) | [Download chromedriver (version >= 116)](https://googlechromelabs.github.io/chrome-for-testing/#stable) | [Download msedgedriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
 
 Video Demo
 [![video](https://img.youtube.com/vi/BEqc2wEX3iY/maxresdefault.jpg)](https://www.youtube.com/watch?v=BEqc2wEX3iY)
