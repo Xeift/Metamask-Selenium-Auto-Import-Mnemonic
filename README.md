@@ -7,11 +7,16 @@ You can download the Metamask extension using [CRX Extractor](https://chrome.goo
 
 `chromedriver.exe` and `msedgedriver.exe` are browser driver.
 
-I use `Edge 116.0.1938.69` and `Chrome 116.0.5845.180`.
+I use `Edge 126.0.2592.61` and `Chrome 126.0.6478.115`.
 
 If you use different version of Edge or Chrome, download the following driver version by yourself and replace `msedgedriver.exe` or `chromedriver.exe` with it.
 
 [Download chromedriver (version <= 115)](https://chromedriver.chromium.org/downloads) | [Download chromedriver (version >= 116)](https://googlechromelabs.github.io/chrome-for-testing/#stable) | [Download msedgedriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
 
-Video Demo
+# Video Demo
 [![video](https://img.youtube.com/vi/BEqc2wEX3iY/maxresdefault.jpg)](https://www.youtube.com/watch?v=BEqc2wEX3iY)
+
+# FAQ
+Why does it says `selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[2]/div/div/section/div[1]/div/button/span"}`?
+
+Probably because you did not use the extension(chromedriver.exe and msedgedriver.exe) provided in the repository. If you prefer use your own version, make sure you modified one line code to solve the [LavaMoat problem](https://github.com/LavaMoat/LavaMoat/pull/360#issuecomment-1547271080).

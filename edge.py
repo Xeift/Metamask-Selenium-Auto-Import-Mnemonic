@@ -14,14 +14,16 @@ chrome_options.add_extension('MetaMask_Edge.crx')
 driver = webdriver.Edge(options=chrome_options)
 driver.maximize_window()
 driver.implicitly_wait(10)
-time.sleep(1)
+time.sleep(5)
 driver.switch_to.window(driver.window_handles[1])
-time.sleep(0.5)
+time.sleep(5)
 #--------------------------------------------------
 
 # fix "Message: unknown error: Runtime.callFunctionOn threw exception: Error: LavaMoat"  
 # solution: https://github.com/LavaMoat/LavaMoat/pull/360#issuecomment-1547271080
-driver.find_element('xpath', '/html/body/div[1]/div/div[2]/div/div/div/ul/li[2]/button').click() # import 
+driver.find_element('xpath', '/html/body/div[1]/div/div[2]/div/div/div/ul/li[1]/div/input').click() # agree to TOS 
+time.sleep(1)
+driver.find_element('xpath', '/html/body/div[1]/div/div[2]/div/div/div/ul/li[3]/button').click() # import 
 time.sleep(0.5)
 driver.find_element('xpath', '/html/body/div[1]/div/div[2]/div/div/div/div/button[2]').click() # no thanks
 time.sleep(0.5)
