@@ -1,12 +1,16 @@
 import json
+import os
 import time
+
+from dotenv import load_dotenv
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
 
-MNEMONIC = 'security curve swallow few tilt attract donor tuition matter place spoon major'.split(' ')
-PASSWORD = '11111111'
+load_dotenv()
+MNEMONIC = os.getenv('MNEMONIC').split(' ')
+PASSWORD = os.getenv('PASSWORD')
 
 #--------------------------------------------------selenium config
 chrome_options = Options()

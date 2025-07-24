@@ -1,4 +1,8 @@
 # Metamask-Selenium-Auto-Import-Mnemonic
+# Note
+Currently, the script does not work because Chrome and Edge can no longer switch to the extension tab. I will try to find another solution.
+
+# Overview
 `chrome.py` and `edge.py` are main script. You can choose either script to run if you have installed both browser.
 
 `MetaMask_Chrome.crx` and `MetaMask_Edge.crx` are Metamask extension download from Chrome Web Store and Edge Web Store, modified one line code. [Why modify?](https://github.com/LavaMoat/LavaMoat/pull/360#issuecomment-1547271080)

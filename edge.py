@@ -1,12 +1,17 @@
 import json
+import os
 import time
+
+from dotenv import load_dotenv
 from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.edge.options import Options
 
-MNEMONIC = 'security curve swallow few tilt attract donor tuition matter place spoon major'.split(' ')
-PASSWORD = '11111111'
+load_dotenv()
+MNEMONIC = os.getenv('MNEMONIC').split(' ')
+PASSWORD = os.getenv('PASSWORD')
 
 #--------------------------------------------------selenium config
 chrome_options = Options()
@@ -15,14 +20,14 @@ driver = webdriver.Edge(options=chrome_options)
 driver.maximize_window()
 driver.implicitly_wait(10)
 time.sleep(5)
-driver.switch_to.window(driver.window_handles[1])
+driver.switch_to.window(driver.window_handles[1]) # TODO: edge driver now can't get the extension tab currently
 time.sleep(5)
 #--------------------------------------------------
 
 # fix "Message: unknown error: Runtime.callFunctionOn threw exception: Error: LavaMoat"  
 # solution: https://github.com/LavaMoat/LavaMoat/pull/360#issuecomment-1547271080
 driver.find_element('xpath', '/html/body/div[1]/div/div[2]/div/div/div/ul/li[1]/div/input').click() # agree to TOS 
-time.sleep(1)
+time.sleep(0.5)
 driver.find_element('xpath', '/html/body/div[1]/div/div[2]/div/div/div/ul/li[3]/button').click() # import 
 time.sleep(0.5)
 driver.find_element('xpath', '/html/body/div[1]/div/div[2]/div/div/div/div/button[2]').click() # no thanks
